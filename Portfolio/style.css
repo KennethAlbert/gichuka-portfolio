@@ -1,0 +1,138 @@
+:root{
+    --text-color--main:#33FF33;
+    --text-color--bold:#66FF66;
+    --link-color: #4a76ee;
+    --bacground-color:#131313;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: 'Inconsolata',sans-serif ;
+    background-color: var(--bacground-color);
+    
+    
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+    height: 80px;
+    align-items: center;
+}
+
+nav .name a{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--text-color--bold);
+    
+}
+
+nav .contacts a{
+  margin:0 10px ; 
+  font-weight: 600; 
+  font-size: 16px;   
+}
+
+
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    margin: 50px 0px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.intro .para-intro{
+    flex: 5;
+    padding-right: 50px;
+    
+  }
+
+  .intro .para-intro h2, p{
+   color: var(--text-color--main);
+   margin-bottom: 30px;
+    
+  }
+
+.intro .headshot {
+    flex: 2; 
+    display: flex; 
+    justify-content: right;
+  }
+
+  .intro .headshot img {
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .intro .para-intro .links a{
+   transition: 0.1s;
+  }
+  .intro .para-intro .links a:hover {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+
+
+@media(max-width:500px){
+    nav .contacts a span{
+        display: none;
+
+    }
+    nav .contacts{
+        margin-top: 50px;
+    }
+
+    nav .contacts a{
+        display: flex;
+        margin-bottom: 12px;
+        font-size:20px;
+
+    }
+
+    .intro {
+        flex-direction: column-reverse;
+    }
+
+    .intro .headshot img{
+        width:150px ;
+        margin-bottom: 20px;
+        margin-right:5px;
+        
+    }
+
+    .intro .para-intro .links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    
+
+
+    
+}
