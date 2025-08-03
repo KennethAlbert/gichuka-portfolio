@@ -20,7 +20,8 @@ body{
 
     font-family: 'Inconsolata',sans-serif ;
     background-color: var(--bacground-color);
-    
+    max-width: 1400px;
+    margin:o auto;
     
 }
 
@@ -35,11 +36,12 @@ nav{
     padding: 0px 70px;
     height: 80px;
     align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
 nav .name a{
     font-weight: 600;
-    font-size: 24px;
+    font-size: 30px;
     color: var(--text-color--bold);
     
 }
@@ -47,7 +49,14 @@ nav .name a{
 nav .contacts a{
   margin:0 10px ; 
   font-weight: 600; 
-  font-size: 16px;   
+  font-size: 20px;  
+  transition: 0.1s; 
+}
+
+nav .contacts a:hover{
+  border: 1px solid var(--link-color);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 
@@ -59,6 +68,8 @@ nav .contacts a{
     margin: 50px 0px;
     align-items: center;
     margin-bottom: 100px;
+ 
+    
 }
 
 .intro .para-intro{
@@ -87,7 +98,7 @@ nav .contacts a{
   .intro .para-intro .links a{
    transition: 0.1s;
   }
-  .intro .para-intro .links a:hover {
+  .intro .para-intro .links  a:hover {
     display: inline-block;
     padding: 5px 10px;
     border: 2px solid var(--link-color);
@@ -95,33 +106,288 @@ nav .contacts a{
     margin-right: 10px;
     margin-bottom: 10px;
   }
+
+  .intro .links .download{
+    background-color: var(--bacground-color);
+    border:0px solid var(--text-color--bold) ;
+    padding: 15px;
+    color:var(--text-color--bold);
+    font-size: 18px;
+    border-radius: 50px;
+     
+  }
+
+
+  .intro .links .icon{
+margin-right: 10px;
+  }
+
+
+
+
+  .skill-class{
+    
+    margin-bottom: 100px;
+    
+    
+  }
+
+  .skill-class h1{
+    color: var(--text-color--bold);
+    font-size: 30px;
+   text-decoration: underline;
+   text-align: center;
+    margin-bottom: 30px;
+    
+  }
+
+
+
+  .skill-class .skill-param{
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+
+  .skill-class .skill-cells{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 50px;
+    
+  }
+
+.skill-class .skill-cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+    color: var(--text-color--main);
+}
+
+.skill-class .skill-cells .cell img{
+    width: 40px;
+    height: 40px;;
+}
+
+.proj-class{
+  padding: 0px 50px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.proj-class h1{
+  color: var(--text-color--bold);
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 30px;
+ 
+}
+
+.proj-class h2{
+  color: var(--text-color--bold);
+  margin-bottom: 15px;
+ 
+}
+
+
+.proj-class .proj{ 
+  margin-bottom: 10px;
+}
+
+
+.education{
+  padding: 0px 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  
+}
+
+.education h1{
+  color: var(--text-color--bold);
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-decoration:underline
+ }
+
+
+ .education .school {
+  margin-bottom: 20px;
+ }
+
+.education .school h2{
+ color: var(--text-color--bold);
+ 
+}
+
+.contact{
+padding: 0 50px;
+margin-bottom: 100px;
+}
+
+
+.contact{
+  padding: 0 50px;
+  margin-bottom: 100px;
+  }
+
+.contact .group{
+display: flex;
+
+}
+
+.contact h1{
+  color: var(--text-color--bold);
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact .group .text{
+  color: var(--text-color--main);
+  flex:3;
+  margin-right:40px;
+}
+
+.contact .group form{
+  color: var(--text-color--main);
+  flex:3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .group form input,
+.contact .group form textarea{
+  font-family:'Inconsolata',sans-serif;
+  background: transparent;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  resize: none;
+  border:1px solid var(--text-color--main);
+  border-radius: 5px;
+}
+
+
+.contact .group form button{
+  font-size: 16px;
+  font-family:'Inconsolata',sans-serif;
+  padding: 10px;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact .group form button:hover{
+background-color: var(--link-color);
+color: var(--text-color--bold);
+border-radius: 10px;
+}
+
+
+.footer {
+  text-align: center;
+  padding-top: 10px;
+  box-shadow: 0 -4px 6px -1px rgba(255, 255, 255, 0.1), 0 -2px 4px -1px rgba(255, 255, 255, 0.06);
+}
+
+.footer p{
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+
+
+.typing-effect {
+  /* The width of the element will be animated to create the typing effect */
+  width: 100%;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Hides the text until the animation expands it */
+
+  /* The total animation duration is 8s (3s typing + 5s pause) */
+  animation: 
+      typing-loop 4s steps(28, end) infinite, /* The typing animation loop */
+      blink-caret-loop 8s step-end infinite;  /* The cursor blinking loop */
+}
+
+/* Keyframes for the typing animation */
+@keyframes typing-loop {
+  /* From 0% to 37.5% (3s of an 8s cycle), the text is typed out */
+  0% { width: 0; }
+  37.5% { width: 100%; }
+  /* From 37.5% to 100% (5s of an 8s cycle), the text stays on the screen */
+  100% { width: 100%; }
+}
+
+
+.swinging-image {
+  animation: swing 4s ease-in-out infinite; /* Apply the swing animation */
+  transform-origin: top center; /* Make it swing from the top center */
+}
+
+/* Keyframes for the swinging animation */
+@keyframes swing {
+  0% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+
+
+
   
 
 
 @media(max-width:500px){
+    nav{
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+
+  } 
     nav .contacts a span{
         display: none;
 
     }
     nav .contacts{
-        margin-top: 50px;
+    display: flex;
+   flex-direction: row;
+       
     }
 
     nav .contacts a{
-        display: flex;
+       margin-top: 20px;
         margin-bottom: 12px;
         font-size:20px;
 
     }
 
+
+
+    
+
     .intro {
         flex-direction: column-reverse;
+        
     }
 
     .intro .headshot img{
         width:150px ;
         margin-bottom: 20px;
         margin-right:5px;
+        align-items: center;
+        
+    }
+
+    .intro .para-intro{
+       text-align: center;
         
     }
 
@@ -133,6 +399,29 @@ nav .contacts a{
     }
     
 
+.skill-class {
+  padding: 0 50px;
+}
+
+.skill-class .skill-cells .cell span{
+  font-size: 16px;
+}
+
+
+.proj-class .proj{ 
+ text-align: center;
+}
+
+
+.contact .group{
+  display: flex;
+  flex-direction: column;
+  }
+
+  .contact .group .text{
+    margin-bottom: 20px;
+    text-align: center;
+    }
 
     
 }
