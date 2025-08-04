@@ -162,7 +162,42 @@ transition: 0.1s;
   text-decoration: underline;
   text-align: center;
   margin-bottom: 30px;
+  
     
+}
+
+.heading-glow{
+  position: relative;
+}
+
+.heading-glow::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  
+  /*
+   * The linear gradient creates the light-like effect:
+   * it is transparent on the edges and semi-transparent white in the middle.
+   */
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  
+  /*
+   * `mix-blend-mode` is the magic here. It blends the light effect
+   * with the green text underneath without overwriting its color,
+   * creating the visual of light passing over it.
+   */
+  mix-blend-mode: overlay;
+  
+  /*
+   * This line applies the 'shimmer' animation, making it run infinitely.
+   * `2s` is the duration, `cubic-bezier` provides a smooth motion, and
+   * `infinite` makes it loop forever.
+   */
+  animation: shimmer 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
 }
 
 
