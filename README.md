@@ -46,6 +46,6 @@ I followed a structured **Software Development Life Cycle (SDLC)** approach:
 
 ---
 
-## 📸 Screenshot
+## 📸 Website
 ```md
 !https://kennethalbert.github.io/gichuka-portfolio/
