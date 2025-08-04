@@ -1,56 +1,85 @@
 :root{
-    --text-color--main:#33FF33;
-    --text-color--bold:#66FF66;
-    --link-color: #4a76ee;
-    --bacground-color:#131313;
+ /* Main text color, used for general text */
+ --text-color--main: #33FF33;
+ /* A bolder, lighter green shade, possibly for highlights */
+ --text-color--bold: #66FF66;
+ /* A blue color for links */
+ --link-color: #4a76ee;
+ /* A dark background color for the page */
+ --bacground-color:#131313;
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;  /* This rule enables smooth scrolling for the entire document */
 }
 
 body{
-
-    font-family: 'Inconsolata',sans-serif ;
-    background-color: var(--bacground-color);
-    max-width: 1400px;
-    margin:o auto;
+  font-family: 'Inconsolata',sans-serif ;
+  background-color: var(--bacground-color);
+  max-width: 1400px;
+  margin:o auto;
     
 }
 
+
 a{
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
+
 nav{
-    display:flex;
-    justify-content: space-between;
-    padding: 0px 70px;
-    height: 80px;
-    align-items: center;
-    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 70px;
+  height: 80px;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav .name a{
-    font-weight: 600;
-    font-size: 30px;
-    color: var(--text-color--bold);
-    
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--text-color--bold);   
 }
 
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-toggle-label {
+  display: none; /* Hidden by default on desktop */
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+nav .contacts{
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex; /* Display as a row on desktop */
+gap: 1.5rem;
+}
+
+
 nav .contacts a{
-  margin:0 10px ; 
-  font-weight: 600; 
-  font-size: 20px;  
-  transition: 0.1s; 
+margin:0 10px ; 
+font-weight: 600; 
+position: relative;
+font-size: 20px;  
+transition: 0.1s; 
 }
 
 nav .contacts a:hover{
@@ -62,120 +91,113 @@ nav .contacts a:hover{
 
 
 .intro{
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 50px;
-    margin: 50px 0px;
-    align-items: center;
-    margin-bottom: 100px;
- 
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  margin: 50px 0px;
+  align-items: center;
+  margin-bottom: 100px;   
+}
+
+
+.intro .para-intro{
+  flex: 5;  /*It sets the 'flex' property to 5, which is a shorthand for 'flex-grow'*/
+}
+
+.intro .para-intro h2, p{
+  color: var(--text-color--main);
+  margin-bottom: 30px;
+}
+
+.intro .headshot {
+flex: 2; /*It sets the 'flex' property to 5, which is a shorthand for 'flex-grow'*/
+display: flex; 
+justify-content: right;
+}
+
+.intro .headshot img {
+width: 200px;
+border-radius: 50%;
+}
+
+.intro .para-intro .links a{
+transition: 0.1s;
+}
+  
+.intro .para-intro .links  a:hover {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+/* Apply the new bounce animation on hover */
+  animation: bounce 0.6s ease-in-out;
+
+}
+
+.intro .links .download{
+  background-color: var(--bacground-color);
+  border:0px solid var(--text-color--bold) ;
+  padding: 15px;
+  color:var(--text-color--bold);
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+
+.intro .links .icon{
+ margin-right: 10px; 
+}
+
+
+.skill-class{ 
+  padding: 0 50px;
+  margin-bottom: 100px;
+ }
+
+.skill-class h1{
+  color: var(--text-color--bold);
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 30px;
     
 }
 
-.intro .para-intro{
-    flex: 5;
-    padding-right: 50px;
+
+
+.skill-class .skill-param{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skill-class .skill-cells{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 50px;
     
-  }
-
-  .intro .para-intro h2, p{
-   color: var(--text-color--main);
-   margin-bottom: 30px;
-    
-  }
-
-.intro .headshot {
-    flex: 2; 
-    display: flex; 
-    justify-content: right;
-  }
-
-  .intro .headshot img {
-    width: 200px;
-    border-radius: 50%;
-  }
-
-  .intro .para-intro .links a{
-   transition: 0.1s;
-  }
-  .intro .para-intro .links  a:hover {
-    display: inline-block;
-    padding: 5px 10px;
-    border: 2px solid var(--link-color);
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-/* Apply the new bounce animation on hover */
- animation: bounce 0.6s ease-in-out;
-  }
-
-  .intro .links .download{
-    background-color: var(--bacground-color);
-    border:0px solid var(--text-color--bold) ;
-    padding: 15px;
-    color:var(--text-color--bold);
-    font-size: 18px;
-    border-radius: 50px;
-     
-  }
-
-
-  .intro .links .icon{
-margin-right: 10px;
-  }
-
-
-
-
-  .skill-class{
-    
-    margin-bottom: 100px;
-    
-    
-  }
-
-  .skill-class h1{
-    color: var(--text-color--bold);
-    font-size: 30px;
-   text-decoration: underline;
-   text-align: center;
-    margin-bottom: 30px;
-    
-  }
-
-
-
-  .skill-class .skill-param{
-    text-align: center;
-    margin-bottom: 20px;
-    
-  }
-
-  .skill-class .skill-cells{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0px 50px;
-    
-  }
+}
 
 .skill-class .skill-cells .cell{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 200px;
-    padding: 10px 20px;
-    margin: 10px;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 5px;
-    color: var(--text-color--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+  color: var(--text-color--main);
+
 }
 
 
 .skill-class .skill-cells .cell img{
-    width: 40px;
-    height: 40px;;
+  width: 40px;
+  height: 40px;;
 }
 
 
@@ -195,13 +217,11 @@ margin-right: 10px;
   text-decoration: underline;
   text-align: center;
   margin-bottom: 30px;
- 
 }
 
 .proj-class h2{
   color: var(--text-color--bold);
   margin-bottom: 15px;
- 
 }
 
 
@@ -213,8 +233,7 @@ margin-right: 10px;
 .education{
   padding: 0px 50px;
   margin-bottom: 100px;
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .education h1{
@@ -232,8 +251,7 @@ margin-right: 10px;
 .education .school h2{
  color: var(--text-color--bold);
  font-size: 24px;
- 
-}
+ }
 
 .education .school p{
   font-size: 22px;
@@ -249,11 +267,10 @@ margin-bottom: 100px;
 .contact{
   padding: 0 50px;
   margin-bottom: 100px;
-  }
+}
 
 .contact .group{
-display: flex;
-
+  display: flex;
 }
 
 .contact h1{
@@ -301,15 +318,17 @@ display: flex;
 }
 
 .contact .group form button:hover{
-background-color: var(--link-color);
-color: var(--text-color--bold);
-border-radius: 10px;
+ background-color: var(--link-color);
+ color: var(--text-color--bold);
+ border-radius: 10px;
 }
 
 
 .footer {
   text-align: center;
   padding-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 -4px 6px -1px rgba(255, 255, 255, 0.1), 0 -2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
@@ -347,6 +366,34 @@ border-radius: 10px;
   transform-origin: top center; /* Make it swing from the top center */
 }
 
+
+.bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+
+.bounce:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.bounce:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bounce:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.bounce:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+
+
+  
+  
+
+
 /* Keyframes for the swinging animation */
 @keyframes swing {
   0% { transform: rotate(10deg); }
@@ -361,63 +408,120 @@ border-radius: 10px;
   100% { transform: translateY(0); }
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+}
 
 
-  
 
+@keyframes shimmer {
+  0% {
+      left: -150%;
+  }
+  100% {
+      left: 150%;
+  }
+}
 
 @media(max-width:500px){
-    nav{
+nav{
   display: flex;
   flex-direction: column;
-  box-shadow: none;
-
-  } 
-    nav .contacts a span{
-        display: none;
-
-    }
-    nav .contacts{
-    display: flex;
-   flex-direction: row;
-       
-    }
-
-    nav .contacts a{
-       margin-top: 20px;
-        margin-bottom: 12px;
-        font-size:20px;
-
-    }
+  width: 100%;
+  padding:0px;
+  box-sizing: border-box;
+}
 
 
+.navbar-toggle-label {
+  display: block; /* Show the hamburger icon on mobile */
+  color: var(--text-color--bold);
+  font-size: 34px;
+}
 
-    
+nav .contacts a span{
+ display: none;
+}
+  
+nav .contacts{
+  display: none; /* Hide the links by default on mobile */
+  flex-direction: column; /* Stack links vertically */
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 60px; /* Position below the main navbar */
+  left: 0;
+  z-index: 10;
+  padding: 1rem 0;
+  transition: transform 0.3s ease-in-out;
 
-    .intro {
-        flex-direction: column-reverse;
-        
-    }
+}
 
-    .intro .headshot img{
-        width:150px ;
-        margin-bottom: 20px;
-        margin-right:5px;
-        align-items: center;
-        
-    }
+nav .contacts a{
+ margin-top: 20px;
+ margin-bottom: 12px;
+ font-size:24px;
+ display: block;
+ color: var(--text-color--bold);
+}
 
-    .intro .para-intro{
-       text-align: center;
-        
-    }
+nav .contacts a:hover{
+  background-color:#78ff78;
+}
 
-    .intro .para-intro .links {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        
-    }
+.navbar-toggle:checked ~ .contacts {
+ display: flex; /* Show the links when the checkbox is checked */
+}
+
+.intro {
+  flex-direction: column-reverse; 
+  align-items: center;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.intro .para-intro p{
+  margin:0px 120px;
+  margin-bottom: 30px;
+}
+
+.intro .para-intro h2{
+  margin:0px 40px;
+  margin-bottom: 30px;
+}
+
+.intro .headshot img{
+ width:150px ;
+ margin-bottom: 20px;
+ margin-right:5px;
+ align-items: center;
+
+}
+
+.intro .para-intro .links {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+
+}
+
+.intro .para-intro .links  .icon{
+  width: 200px;
+  border: 1px solid var(--text-color--main);
+  margin-left: 35%;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
     
 
 .skill-class {
@@ -430,19 +534,19 @@ border-radius: 10px;
 
 
 .proj-class .proj{ 
- text-align: center;
+  text-align: center;
 }
 
 
 .contact .group{
   display: flex;
   flex-direction: column;
-  }
+}
 
-  .contact .group .text{
-    margin-bottom: 20px;
-    text-align: center;
-    }
+.contact .group .text{
+  margin-bottom: 20px;
+  text-align: center;
+}
 
     
 }
