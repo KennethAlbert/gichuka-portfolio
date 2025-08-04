@@ -47,8 +47,5 @@ I followed a structured **Software Development Life Cycle (SDLC)** approach:
 ---
 
 ## 📸 Screenshot
-
-_Add a screenshot of your website here if possible._
-
 ```md
-![Portfolio Screenshot](path/to/screenshot.png)
+!https://kennethalbert.github.io/gichuka-portfolio/
