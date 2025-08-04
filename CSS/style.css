@@ -196,7 +196,7 @@ transition: 0.1s;
    * `2s` is the duration, `cubic-bezier` provides a smooth motion, and
    * `infinite` makes it loop forever.
    */
-  animation: shimmer 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: shimmer 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 
 }
 
